@@ -21,11 +21,11 @@ dotenv.config({ path: "./config.env" });
 app.use(express.json());
 app.use(cors());
 
-// app.use((req,res,next)=>{
-//     res.setHeader("Access-Control-Allow-Origin","*")
-//     res.setHeader("Access-Control-Allow-Headers","*")
-//     next()
-// })
+app.use((req,res,next)=>{
+    res.setHeader("Access-Control-Allow-Origin","*")
+    res.setHeader("Access-Control-Allow-Headers","*")
+    next()
+})
 
 //DB config
 mongoose
