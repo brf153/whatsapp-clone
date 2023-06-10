@@ -1,7 +1,7 @@
 # Whatsapp-Clone
 Hey there, this is a MERN stack real-time messaging app. I was learning Pusher and so, I decided to make this app. Note that the app would not be functional right now, as the vercel plan that I am using gives me a 504 timeout error. To fix this I will have to upgrade my plan. So, if you want to run this app, follow the steps below:-
 
-i) Fork the repo and clone it in your pc.
+i) Fork the repo and clone it in your pc. <br/>
 ii) Then in the backend folder, make a config.js file. In this file, give the URL of your mongoDB database for connection.
 iii) Then go to the website of pusher and make an account. After making an account, login to the account.
 iv) There would be two options named Channels and Beams. Get started with channels. Scroll down and you would get a section with the name Node.js. Copy the appId and other stuff(everything inside const pusher) and paste it in the config.js file.
