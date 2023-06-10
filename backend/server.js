@@ -8,16 +8,11 @@ const cors = require("cors");
 //app config
 const app = express();
 const port = process.env.PORT || 4000;
-const corsOptions ={
-  origin:'http://localhost:3000', 
-  credentials:true,            //access-control-allow-credentials:true
-  optionSuccessStatus:200
-}
 
 //middleware
 dotenv.config({ path: "./config.env" });
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use((req,res,next)=>{
     res.setHeader("Access-Control-Allow-Origin","*")
@@ -26,11 +21,11 @@ app.use((req,res,next)=>{
 })
 
 const pusher = new Pusher({
-  appId: process.env.APPID,
-  key: process.env.KEY,
-  secret: process.env.SECRET,
-  cluster: process.env.CLUSTER,
-  useTLS: process.env.USETLS,
+  appId: "1615914",
+  key: "5059c08ce5ce49931a62",
+  secret: "2521d53724047d371de1",
+  cluster: "ap2",
+  useTLS: true,
 });
 
 //DB config
