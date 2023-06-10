@@ -8,13 +8,6 @@ const cors = require("cors");
 //app config
 const app = express();
 const port = process.env.PORT || 4000;
-const pusher = new Pusher({
-  appId: "1615914",
-  key: "5059c08ce5ce49931a62",
-  secret: "2521d53724047d371de1",
-  cluster: "ap2",
-  useTLS: true,
-});
 
 //middleware
 dotenv.config({ path: "./config.env" });
@@ -26,6 +19,14 @@ app.use((req,res,next)=>{
     res.setHeader("Access-Control-Allow-Headers","*")
     next()
 })
+
+const pusher = new Pusher({
+  appId: "1615914",
+  key: "5059c08ce5ce49931a62",
+  secret: "2521d53724047d371de1",
+  cluster: "ap2",
+  useTLS: true,
+});
 
 //DB config
 mongoose
